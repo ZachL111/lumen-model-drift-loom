@@ -1,0 +1,73 @@
+{
+  "repo": "lumen-model-drift-loom",
+  "language": "Haskell",
+  "category": "ML utilities",
+  "goal": "Create a Haskell reference implementation for drift workflows, centered on event replay, fixture event logs, and golden state snapshots.",
+  "review_model": {
+    "terms": [
+      "feature drift",
+      "window width",
+      "metric stability",
+      "explainability"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "feature drift",
+      "signal": 50,
+      "slack": 38,
+      "drag": 13,
+      "confidence": 90,
+      "score": 189,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "window width",
+      "signal": 69,
+      "slack": 27,
+      "drag": 23,
+      "confidence": 56,
+      "score": 152,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "metric stability",
+      "signal": 59,
+      "slack": 22,
+      "drag": 23,
+      "confidence": 60,
+      "score": 131,
+      "lane": "watch"
+    },
+    {
+      "name": "recovery",
+      "focus": "explainability",
+      "signal": 50,
+      "slack": 31,
+      "drag": 24,
+      "confidence": 73,
+      "score": 132,
+      "lane": "watch"
+    },
+    {
+      "name": "stale",
+      "focus": "feature drift",
+      "signal": 57,
+      "slack": 31,
+      "drag": 16,
+      "confidence": 77,
+      "score": 174,
+      "lane": "ship"
+    }
+  ]
+}
