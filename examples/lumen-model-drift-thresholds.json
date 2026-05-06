@@ -1,0 +1,17 @@
+{
+  "repo": "lumen-model-drift-loom",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 3,
+    "ship": 194,
+    "watch": 113
+  },
+  "terms": [
+    "feature drift",
+    "window width",
+    "metric stability",
+    "explainability"
+  ]
+}
